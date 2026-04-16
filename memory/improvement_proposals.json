@@ -1,0 +1,101 @@
+{
+  "proposals": [
+    {
+      "id": "imp_a51ce21f",
+      "title": "Operator Brain: All planned steps completed and verified. the user-facing te",
+      "problem": "Repeated friction in operator brain is being observed as 'All planned steps completed and verified. The user-facing text looked like a failure, but the verified payload indicated success.' via verification_mismatch.",
+      "why": "This candidate was logged 7 times with impact 4 and ease 5, producing score 140.",
+      "scope": "Apply a small, local fix in operator brain without changing the wider Rogue architecture.",
+      "risk": "medium",
+      "files": [
+        "operator_brain.py"
+      ],
+      "patch_category": "normalization_fix",
+      "patch_strategy": "replace_text",
+      "confidence": {
+        "score": 87,
+        "level": "high",
+        "factors": {
+          "event_frequency": 24,
+          "issue_consistency": 14,
+          "scope_tightness": 14,
+          "risk_level": 4,
+          "file_count": 8,
+          "patch_strategy_type": 13,
+          "validation_availability": 10
+        },
+        "notes": [
+          "Confidence is high because the issue appears 7 times across 7 clustered events.",
+          "Planned scope is 1 file(s) with medium estimated risk and normalization_fix strategy."
+        ]
+      },
+      "acceptance_criteria": [
+        "The operator brain flow handles 'All planned steps completed and verified. The user-facing text looked like a failure, but the verified payload indicated success.' more deterministically.",
+        "A focused regression test covers the observed failure or correction case.",
+        "The change stays local and does not require framework or dependency changes."
+      ],
+      "recommended_action": "Implement a local fix in operator_brain.py for 'All planned steps completed and verified. The user-facing text looked like a failure, but the verified payload indicated success.' before considering broader changes.",
+      "validation_plan": {
+        "python_files": [
+          "operator_brain.py"
+        ],
+        "imports": [
+          "operator_brain"
+        ],
+        "tests": [
+          "tests.test_improvement_layer"
+        ]
+      },
+      "measurement_plan": {
+        "metrics": [],
+        "before": {},
+        "after": {},
+        "notes": [
+          "Metrics remain unknown until explicit before/after evidence is recorded."
+        ]
+      },
+      "patch_plan": {
+        "category": "normalization_fix",
+        "strategy": "replace_text",
+        "files": [
+          "operator_brain.py"
+        ],
+        "operations": [],
+        "validation": {
+          "python_files": [
+            "operator_brain.py"
+          ],
+          "imports": [
+            "operator_brain"
+          ],
+          "tests": [
+            "tests.test_improvement_layer"
+          ]
+        },
+        "notes": [
+          "Planner output is proposal-only until a narrow structured patch plan is attached.",
+          "Execution remains approval-gated and reversible."
+        ]
+      },
+      "status": "ready_for_review",
+      "safety": {
+        "allowed": true,
+        "execution_allowed": false,
+        "category": "normalization_fix",
+        "risk": "low",
+        "reasons": [
+          "Proposal stays within a small, local file scope."
+        ],
+        "blocked_files": [],
+        "notes": [
+          "Evaluation remains conservative. No proposal is executed automatically without approval.",
+          "Proposal does not yet include structured patch operations, so it remains proposal-only."
+        ]
+      },
+      "approval_required": true,
+      "execution_ready": false,
+      "updated_at": "2026-04-15T15:18:40"
+    }
+  ],
+  "updated_at": "2026-04-15T15:18:40"
+}

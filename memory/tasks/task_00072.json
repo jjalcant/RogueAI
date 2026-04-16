@@ -1,0 +1,58 @@
+{
+  "task_id": 72,
+  "goal": "scan my computer",
+  "status": "failed",
+  "created_at": "2026-04-14T17:12:37",
+  "updated_at": "2026-04-14T17:12:37",
+  "steps": [
+    {
+      "id": 1,
+      "title": "Summarize folder computer",
+      "tool_name": "summarize_folder",
+      "tool_input": {
+        "path_name": "computer"
+      },
+      "verification": {
+        "type": "folder_summary_payload",
+        "required_sections": [
+          "total_files",
+          "total_directories",
+          "top_file_types",
+          "largest_files",
+          "newest_files"
+        ]
+      },
+      "max_retries": 1,
+      "step_index": 0,
+      "status": "failed",
+      "result": null,
+      "failure_reason": "Safe folder not found or unavailable: computer",
+      "verification_result": {
+        "verified": false,
+        "reason": "Safe folder not found or unavailable: computer",
+        "timestamp": "2026-04-14T17:12:37"
+      },
+      "retry_count": 1
+    }
+  ],
+  "current_step": 0,
+  "completed_steps": [],
+  "failed_steps": [
+    {
+      "step_index": 0,
+      "reason": "Safe folder not found or unavailable: computer",
+      "timestamp": "2026-04-14T17:12:37"
+    }
+  ],
+  "retry_counts": {
+    "0": 1
+  },
+  "verification_results": {
+    "0": {
+      "verified": false,
+      "reason": "Safe folder not found or unavailable: computer",
+      "timestamp": "2026-04-14T17:12:37"
+    }
+  },
+  "final_summary": "Goal: scan my computer\nObserved facts:\n- Planned tasks: 1\n- Verified completed tasks: 0\n- Unverified or failed tasks: 1\n\nGoal: scan my computer\nPlanned tasks:\n1. Summarize folder computer -> summarize_folder\n\nExecution results:\n- Task 1 (summarize_folder): Safe folder not found or unavailable: computer [verified=False; attempts=2; reason=Safe folder not found or unavailable: computer]\n  error: Safe folder not found or unavailable: computer\n\nOutcome:\n- The workflow did not reach verified completion."
+}

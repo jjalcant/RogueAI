@@ -1,0 +1,1418 @@
+[
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0ah8g88l\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0ah8g88l\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T16:57:00",
+    "batch_id": "downloads-12778f2f9eba",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmptg3_t38e\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmptg3_t38e\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T16:57:00",
+    "batch_id": "home-b2bf039f3817",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmptg3_t38e\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmptg3_t38e\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T16:57:00",
+    "batch_id": "home-b2bf039f3817",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\-1.14-windows.xml",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\LooseFiles\\-1.14-windows.xml",
+    "category": "LooseFiles",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\.bash_history",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\LooseFiles\\.bash_history",
+    "category": "LooseFiles",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\.condarc",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\LooseFiles\\.condarc",
+    "category": "LooseFiles",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\.lmstudio-home-pointer",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\LooseFiles\\.lmstudio-home-pointer",
+    "category": "LooseFiles",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\.packettracer",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\LooseFiles\\.packettracer",
+    "category": "LooseFiles",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\.python_history",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\Configs\\.python_history",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\1.8",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\LooseFiles\\1.8",
+    "category": "LooseFiles",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\inst.ini",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\Configs\\inst.ini",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\ntuser.ini",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\Configs\\ntuser.ini",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\nuuid.ini",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\Configs\\nuuid.ini",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\test.txt",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\Notes\\test.txt",
+    "category": "Notes",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\useruid.ini",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\Configs\\useruid.ini",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\yolo11n.pt",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\Models\\yolo11n.pt",
+    "category": "Models",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\yolov8n.pt",
+    "destination_path": "C:\\Users\\Jhonn\\OrganizedWorkspace\\Models\\yolov8n.pt",
+    "category": "Models",
+    "timestamp": "2026-04-06T17:10:18",
+    "batch_id": "home-b7c09ca5ddcb",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp364wjbw9\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp364wjbw9\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T17:11:46",
+    "batch_id": "downloads-842abbc09847",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp_f4sb0bc\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp_f4sb0bc\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:11:46",
+    "batch_id": "home-adb95df4dbfd",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp_f4sb0bc\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp_f4sb0bc\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T17:11:46",
+    "batch_id": "home-adb95df4dbfd",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpwe81jixm\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpwe81jixm\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T17:16:56",
+    "batch_id": "downloads-8d0a33cda0c4",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmphyyvj92t\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmphyyvj92t\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:16:56",
+    "batch_id": "home-36d3cf6605ba",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmphyyvj92t\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmphyyvj92t\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T17:16:56",
+    "batch_id": "home-36d3cf6605ba",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpdyeaz4kj\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpdyeaz4kj\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T17:17:09",
+    "batch_id": "downloads-cfe348e4e209",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp58f350pr\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp58f350pr\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:17:09",
+    "batch_id": "home-f4fe403d7231",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp58f350pr\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp58f350pr\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T17:17:09",
+    "batch_id": "home-f4fe403d7231",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpdg02g2ew\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpdg02g2ew\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T17:17:18",
+    "batch_id": "downloads-ac959ddcdf49",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp04oxv5xm\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp04oxv5xm\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:17:18",
+    "batch_id": "home-a2391bd6af7b",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp04oxv5xm\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp04oxv5xm\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T17:17:18",
+    "batch_id": "home-a2391bd6af7b",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpu0gknuoy\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpu0gknuoy\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T17:17:32",
+    "batch_id": "downloads-bbcb6110d76a",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpfudnuniq\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpfudnuniq\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:17:32",
+    "batch_id": "home-6632855e14ff",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpfudnuniq\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpfudnuniq\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T17:17:32",
+    "batch_id": "home-6632855e14ff",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpm_s45zi6\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpm_s45zi6\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T17:29:05",
+    "batch_id": "downloads-1835544061e7",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpgg740e9e\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpgg740e9e\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:29:05",
+    "batch_id": "home-61351987a0d7",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpgg740e9e\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpgg740e9e\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T17:29:05",
+    "batch_id": "home-61351987a0d7",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpgs0f1npw\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpgs0f1npw\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T17:31:16",
+    "batch_id": "downloads-1bd1783febe3",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpjamhqkjc\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpjamhqkjc\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:31:16",
+    "batch_id": "home-6d3e02e199c6",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpjamhqkjc\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpjamhqkjc\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T17:31:16",
+    "batch_id": "home-6d3e02e199c6",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp9yvzn69l\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp9yvzn69l\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T17:35:55",
+    "batch_id": "downloads-b6d5a9fb5d46",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi3x_wp8p\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi3x_wp8p\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T17:35:55",
+    "batch_id": "home-50cd8c0097de",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi3x_wp8p\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi3x_wp8p\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T17:35:55",
+    "batch_id": "home-50cd8c0097de",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp34k8ukj5\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp34k8ukj5\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T20:33:16",
+    "batch_id": "downloads-f4dbf49c76cc",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp48friy3s\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp48friy3s\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T20:33:16",
+    "batch_id": "home-df85d169c101",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp48friy3s\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp48friy3s\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T20:33:16",
+    "batch_id": "home-df85d169c101",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp2suowe8l\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp2suowe8l\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T20:45:50",
+    "batch_id": "downloads-ddf11ba4c9c4",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpswg51m9v\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpswg51m9v\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T20:45:50",
+    "batch_id": "home-b405dfc13d71",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpswg51m9v\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpswg51m9v\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T20:45:50",
+    "batch_id": "home-b405dfc13d71",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmptk8449nc\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmptk8449nc\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T21:52:41",
+    "batch_id": "downloads-ef5a2fef8091",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp85nz5chv\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp85nz5chv\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T21:52:41",
+    "batch_id": "home-e51fe5fe125e",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp85nz5chv\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp85nz5chv\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T21:52:41",
+    "batch_id": "home-e51fe5fe125e",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpz7772g92\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpz7772g92\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T21:53:13",
+    "batch_id": "downloads-bb25098f9b02",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpw4e72oks\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpw4e72oks\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T21:53:13",
+    "batch_id": "home-5644bd132f1e",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpw4e72oks\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpw4e72oks\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T21:53:13",
+    "batch_id": "home-5644bd132f1e",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp3wbcbc6d\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp3wbcbc6d\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-06T22:11:37",
+    "batch_id": "downloads-36b229503274",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpojxz_z2u\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpojxz_z2u\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-06T22:11:37",
+    "batch_id": "home-51230a867f57",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpojxz_z2u\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpojxz_z2u\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-06T22:11:37",
+    "batch_id": "home-51230a867f57",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp8m4624en\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp8m4624en\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T16:21:57",
+    "batch_id": "downloads-de6bd15801ce",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpq_l5emju\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpq_l5emju\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T16:21:57",
+    "batch_id": "home-254b67249278",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpq_l5emju\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpq_l5emju\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T16:21:57",
+    "batch_id": "home-254b67249278",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpng6unnu0\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpng6unnu0\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T16:22:07",
+    "batch_id": "downloads-631893f3c0b3",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpv1mbe11z\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpv1mbe11z\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T16:22:07",
+    "batch_id": "home-83a776a32316",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpv1mbe11z\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpv1mbe11z\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T16:22:07",
+    "batch_id": "home-83a776a32316",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpky1xz47w\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpky1xz47w\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T16:22:38",
+    "batch_id": "downloads-b5fdc43f879d",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp30xu5adv\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp30xu5adv\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T16:22:38",
+    "batch_id": "home-664eb395ae0a",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp30xu5adv\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp30xu5adv\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T16:22:38",
+    "batch_id": "home-664eb395ae0a",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpl464i3yr\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpl464i3yr\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T16:33:38",
+    "batch_id": "downloads-4592754dbff8",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0t7yqa5z\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0t7yqa5z\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T16:33:38",
+    "batch_id": "home-77ac10fc0205",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0t7yqa5z\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0t7yqa5z\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T16:33:38",
+    "batch_id": "home-77ac10fc0205",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp9l4tgkgc\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp9l4tgkgc\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T16:33:49",
+    "batch_id": "downloads-215f8a587741",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi8lebumf\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi8lebumf\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T16:33:49",
+    "batch_id": "home-a9953decad8f",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi8lebumf\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi8lebumf\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T16:33:49",
+    "batch_id": "home-a9953decad8f",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpdwxea535\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpdwxea535\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T16:44:27",
+    "batch_id": "downloads-763dfceb9c0a",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpbjb5v66y\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpbjb5v66y\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T16:44:27",
+    "batch_id": "home-e5d21b2c5dc5",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpbjb5v66y\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpbjb5v66y\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T16:44:27",
+    "batch_id": "home-e5d21b2c5dc5",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpfg8xa9_d\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpfg8xa9_d\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T16:56:34",
+    "batch_id": "downloads-9b72ab987ec9",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpunaqvisr\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpunaqvisr\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T16:56:34",
+    "batch_id": "home-e3a3b7560dd1",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpunaqvisr\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpunaqvisr\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T16:56:34",
+    "batch_id": "home-e3a3b7560dd1",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpqt573tx8\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpqt573tx8\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T16:56:43",
+    "batch_id": "downloads-d5cf90e3c289",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpebe34q1k\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpebe34q1k\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T16:56:43",
+    "batch_id": "home-ae1ccf2eb4d6",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpebe34q1k\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpebe34q1k\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T16:56:43",
+    "batch_id": "home-ae1ccf2eb4d6",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpyj7zyf1x\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpyj7zyf1x\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T16:57:00",
+    "batch_id": "downloads-cbbc8ffee877",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpvd3_iwey\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpvd3_iwey\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T16:57:00",
+    "batch_id": "home-1bbb355b1d9a",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpvd3_iwey\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpvd3_iwey\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T16:57:00",
+    "batch_id": "home-1bbb355b1d9a",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpqanw2i_w\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpqanw2i_w\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T16:58:36",
+    "batch_id": "downloads-6a344beb660c",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpslibfjs1\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpslibfjs1\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T16:58:36",
+    "batch_id": "home-6d19cc554980",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpslibfjs1\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpslibfjs1\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T16:58:36",
+    "batch_id": "home-6d19cc554980",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpuwzpjaxn\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpuwzpjaxn\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T16:58:51",
+    "batch_id": "downloads-4e42fe9001dc",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp964gv9y0\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp964gv9y0\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T16:58:51",
+    "batch_id": "home-3d8c686f3c14",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp964gv9y0\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp964gv9y0\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T16:58:51",
+    "batch_id": "home-3d8c686f3c14",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmprjbwjxn2\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmprjbwjxn2\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T17:10:58",
+    "batch_id": "downloads-875accac0f18",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi8yfginh\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi8yfginh\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T17:10:58",
+    "batch_id": "home-2c21a4b8d160",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi8yfginh\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpi8yfginh\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T17:10:58",
+    "batch_id": "home-2c21a4b8d160",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7pez85bd\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7pez85bd\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T17:17:25",
+    "batch_id": "downloads-4f07cc797fbe",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp1myfm_e1\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp1myfm_e1\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T17:17:25",
+    "batch_id": "home-ab70c0b7b544",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp1myfm_e1\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp1myfm_e1\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T17:17:25",
+    "batch_id": "home-ab70c0b7b544",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpkvzss4r6\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpkvzss4r6\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T17:17:37",
+    "batch_id": "downloads-653355a8a0d5",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpapsnilmq\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpapsnilmq\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T17:17:37",
+    "batch_id": "home-7cef4c372a11",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpapsnilmq\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpapsnilmq\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T17:17:37",
+    "batch_id": "home-7cef4c372a11",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpqxtyymmr\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpqxtyymmr\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T17:18:12",
+    "batch_id": "downloads-eec6d090d6f4",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp6kw8iam7\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp6kw8iam7\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T17:18:12",
+    "batch_id": "home-f8d8fcc91930",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp6kw8iam7\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp6kw8iam7\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T17:18:12",
+    "batch_id": "home-f8d8fcc91930",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7zrovwbe\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7zrovwbe\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T17:26:13",
+    "batch_id": "downloads-4c66d0286882",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0xwhdhff\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0xwhdhff\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T17:26:13",
+    "batch_id": "home-3bee22736aab",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0xwhdhff\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0xwhdhff\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T17:26:13",
+    "batch_id": "home-3bee22736aab",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpmvjnbpuj\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpmvjnbpuj\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T17:38:05",
+    "batch_id": "downloads-4dcfa468b84c",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp8g0d8yyw\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp8g0d8yyw\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T17:38:05",
+    "batch_id": "home-f90ffb4ba9af",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp8g0d8yyw\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp8g0d8yyw\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T17:38:05",
+    "batch_id": "home-f90ffb4ba9af",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmppto8vjq2\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmppto8vjq2\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T19:50:05",
+    "batch_id": "downloads-6a07a06ce1f8",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpwiqd33mk\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpwiqd33mk\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T19:50:05",
+    "batch_id": "home-c773963ca059",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpwiqd33mk\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpwiqd33mk\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T19:50:05",
+    "batch_id": "home-c773963ca059",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpwd6i8_jx\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpwd6i8_jx\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-08T19:55:19",
+    "batch_id": "downloads-369af063309b",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpckmd01ya\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpckmd01ya\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-08T19:55:19",
+    "batch_id": "home-0cf873c18a76",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpckmd01ya\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpckmd01ya\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-08T19:55:19",
+    "batch_id": "home-0cf873c18a76",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpla6mkpau\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpla6mkpau\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-09T02:04:57",
+    "batch_id": "downloads-05bafd6b0700",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpgy8u4w7g\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpgy8u4w7g\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-09T02:04:57",
+    "batch_id": "home-d6d52a885956",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpgy8u4w7g\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpgy8u4w7g\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-09T02:04:57",
+    "batch_id": "home-d6d52a885956",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp3c651xhw\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp3c651xhw\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-09T02:24:26",
+    "batch_id": "downloads-deae4acb70c8",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp81h6wpzu\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp81h6wpzu\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-09T02:24:26",
+    "batch_id": "home-2d5217f438ea",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp81h6wpzu\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp81h6wpzu\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-09T02:24:26",
+    "batch_id": "home-2d5217f438ea",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpmtvvjrec\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpmtvvjrec\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-09T02:28:34",
+    "batch_id": "downloads-5b759a2fb706",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpm45ghig1\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpm45ghig1\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-09T02:28:34",
+    "batch_id": "home-86c519265303",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpm45ghig1\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpm45ghig1\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-09T02:28:34",
+    "batch_id": "home-86c519265303",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7rw3u0og\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7rw3u0og\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-10T22:35:07",
+    "batch_id": "downloads-9e71a2cd38ea",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpdddmna1p\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpdddmna1p\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-10T22:35:07",
+    "batch_id": "home-ff4543c20257",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpdddmna1p\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpdddmna1p\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-10T22:35:07",
+    "batch_id": "home-ff4543c20257",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpk8b9xlhp\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpk8b9xlhp\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-10T22:37:09",
+    "batch_id": "downloads-57b227f3ef57",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp67xyxa7o\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp67xyxa7o\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-10T22:37:09",
+    "batch_id": "home-77323517db23",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp67xyxa7o\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp67xyxa7o\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-10T22:37:09",
+    "batch_id": "home-77323517db23",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpj_dvve88\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpj_dvve88\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-10T22:38:43",
+    "batch_id": "downloads-57e8f26f3107",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp9b5cqnqm\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp9b5cqnqm\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-10T22:38:43",
+    "batch_id": "home-74aba6cea3e3",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp9b5cqnqm\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp9b5cqnqm\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-10T22:38:43",
+    "batch_id": "home-74aba6cea3e3",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp3zssv7gk\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp3zssv7gk\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-10T22:43:43",
+    "batch_id": "downloads-3b6209271ba2",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpv8sa5bht\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpv8sa5bht\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-10T22:43:43",
+    "batch_id": "home-f14338002789",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpv8sa5bht\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpv8sa5bht\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-10T22:43:43",
+    "batch_id": "home-f14338002789",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpn73ho21a\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpn73ho21a\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-10T22:44:13",
+    "batch_id": "downloads-d96da5417e0c",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpuxk2_504\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpuxk2_504\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-10T22:44:13",
+    "batch_id": "home-729e0bfc479d",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpuxk2_504\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpuxk2_504\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-10T22:44:13",
+    "batch_id": "home-729e0bfc479d",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpkma0tqfb\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpkma0tqfb\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-10T22:52:56",
+    "batch_id": "downloads-1ba24a1a9ee9",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpp7tzcue9\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpp7tzcue9\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-10T22:52:56",
+    "batch_id": "home-eb26ec0765ee",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpp7tzcue9\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpp7tzcue9\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-10T22:52:56",
+    "batch_id": "home-eb26ec0765ee",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpd0lxve1l\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpd0lxve1l\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-10T23:14:38",
+    "batch_id": "downloads-830d63db7e17",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpbu8cy5pw\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpbu8cy5pw\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-10T23:14:38",
+    "batch_id": "home-e855b326a31b",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpbu8cy5pw\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpbu8cy5pw\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-10T23:14:38",
+    "batch_id": "home-e855b326a31b",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpafdiidl7\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpafdiidl7\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-11T15:24:37",
+    "batch_id": "downloads-02d346a4c2fa",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmptyrfxhow\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmptyrfxhow\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-11T15:24:37",
+    "batch_id": "home-4dc5aec9ce31",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmptyrfxhow\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmptyrfxhow\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-11T15:24:37",
+    "batch_id": "home-4dc5aec9ce31",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpl73in8bh\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpl73in8bh\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-11T15:48:53",
+    "batch_id": "downloads-9b788b6d0796",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp8j693zf_\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp8j693zf_\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-11T15:48:53",
+    "batch_id": "home-b4039cd4254a",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp8j693zf_\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp8j693zf_\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-11T15:48:53",
+    "batch_id": "home-b4039cd4254a",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpj0kgnnvc\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpj0kgnnvc\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-11T17:24:05",
+    "batch_id": "downloads-c5e3f84f3a24",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpccwf4z5n\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpccwf4z5n\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-11T17:24:05",
+    "batch_id": "home-8f2559a6dda1",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpccwf4z5n\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpccwf4z5n\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-11T17:24:05",
+    "batch_id": "home-8f2559a6dda1",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpe1ojsq_g\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpe1ojsq_g\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-11T17:24:17",
+    "batch_id": "downloads-d73615feb7ee",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7ue7tcq9\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7ue7tcq9\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-11T17:24:17",
+    "batch_id": "home-2b4d38b116d0",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7ue7tcq9\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7ue7tcq9\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-11T17:24:17",
+    "batch_id": "home-2b4d38b116d0",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpxrb7wx0r\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpxrb7wx0r\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-11T17:24:31",
+    "batch_id": "downloads-ed05f857b0f1",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpr_ice5v8\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpr_ice5v8\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-11T17:24:31",
+    "batch_id": "home-20232d07725b",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpr_ice5v8\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpr_ice5v8\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-11T17:24:31",
+    "batch_id": "home-20232d07725b",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7z_8wsgy\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp7z_8wsgy\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-11T23:17:11",
+    "batch_id": "downloads-066de7b70fec",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp6_qcqynq\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp6_qcqynq\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-11T23:17:11",
+    "batch_id": "home-5aa5c095bcb7",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp6_qcqynq\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp6_qcqynq\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-11T23:17:11",
+    "batch_id": "home-5aa5c095bcb7",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp6fmph91j\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp6fmph91j\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-11T23:25:08",
+    "batch_id": "downloads-9579dd326449",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpzlsp82xb\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpzlsp82xb\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-11T23:25:08",
+    "batch_id": "home-bd059f2db1c1",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpzlsp82xb\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpzlsp82xb\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-11T23:25:08",
+    "batch_id": "home-bd059f2db1c1",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpjk5u4uw7\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpjk5u4uw7\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-11T23:58:40",
+    "batch_id": "downloads-38af39510bc4",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpa9svasbf\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpa9svasbf\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-11T23:58:40",
+    "batch_id": "home-36d39a6bc2bd",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpa9svasbf\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpa9svasbf\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-11T23:58:40",
+    "batch_id": "home-36d39a6bc2bd",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpkno87o3f\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpkno87o3f\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-12T14:51:21",
+    "batch_id": "downloads-b611424e0cd8",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpch_jezcz\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpch_jezcz\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-12T14:51:21",
+    "batch_id": "home-3a188ed10338",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpch_jezcz\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpch_jezcz\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-12T14:51:21",
+    "batch_id": "home-3a188ed10338",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpkumqp0z4\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpkumqp0z4\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-12T15:08:00",
+    "batch_id": "downloads-1ceeac3a12b6",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpvjn5y5b0\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpvjn5y5b0\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-12T15:08:00",
+    "batch_id": "home-f471c3ecccbc",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpvjn5y5b0\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpvjn5y5b0\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-12T15:08:00",
+    "batch_id": "home-f471c3ecccbc",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0n611i50\\Downloads\\song.mp3",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmp0n611i50\\Downloads\\Organized\\Music\\song.mp3",
+    "category": "Music",
+    "timestamp": "2026-04-13T23:40:40",
+    "batch_id": "downloads-91121193b89b",
+    "scope": "downloads"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpna2jdktj\\Home\\.gitconfig",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpna2jdktj\\Home\\OrganizedWorkspace\\Configs\\.gitconfig",
+    "category": "Configs",
+    "timestamp": "2026-04-13T23:40:40",
+    "batch_id": "home-12f11fc72414",
+    "scope": "home_workspace"
+  },
+  {
+    "original_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpna2jdktj\\Home\\scratch.tmp",
+    "destination_path": "C:\\Users\\Jhonn\\AppData\\Local\\Temp\\tmpna2jdktj\\Home\\OrganizedWorkspace\\Temp\\scratch.tmp",
+    "category": "Temp",
+    "timestamp": "2026-04-13T23:40:40",
+    "batch_id": "home-12f11fc72414",
+    "scope": "home_workspace"
+  }
+]

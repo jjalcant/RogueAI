@@ -1,0 +1,11 @@
+{
+ "user": "Jhonny",
+ "assistant_name": "Rogue",
+ "main_projects_folder": "C:\\RogueAI",
+ "notes": [
+  "Jhonny is building a local AI system called Rogue",
+  "This PC is an AI workstation",
+  "Rogue runs with llama3 locally",
+  "Main development folder is C:\\RogueAI"
+ ]
+}

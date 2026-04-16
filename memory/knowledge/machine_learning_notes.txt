@@ -1,0 +1,13 @@
+Machine learning basics:
+
+Supervised learning
+Unsupervised learning
+Reinforcement learning
+
+Common libraries:
+- scikit-learn
+- tensorflow
+- pytorch
+
+Typical ML pipeline:
+data -> preprocessing -> training -> evaluation

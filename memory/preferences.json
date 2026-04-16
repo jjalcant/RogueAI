@@ -1,0 +1,7 @@
+{
+  "response_style": "step_by_step",
+  "tone": "concise_intelligent",
+  "avoid_fluff": true,
+  "chunk_tasks": true,
+  "default_mode": "zaza"
+}

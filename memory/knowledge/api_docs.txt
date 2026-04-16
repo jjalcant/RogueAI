@@ -1,0 +1,11 @@
+REST API basics:
+
+GET - retrieve data
+POST - create data
+PUT - update data
+DELETE - remove data
+
+Example endpoint:
+
+GET /users
+POST /users

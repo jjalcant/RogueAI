@@ -1,0 +1,61 @@
+{
+  "task_id": 68,
+  "goal": "organize it",
+  "status": "failed",
+  "created_at": "2026-04-13T23:18:09",
+  "updated_at": "2026-04-13T23:18:09",
+  "steps": [
+    {
+      "id": 1,
+      "title": "Preview folder organization for it",
+      "tool_name": "preview_folder_organization",
+      "tool_input": {
+        "path_name": "it",
+        "recursive": false
+      },
+      "verification": {
+        "type": "organization_preview_payload",
+        "required_sections": [
+          "path",
+          "scope",
+          "included_subfolders",
+          "total_files_analyzed",
+          "nested_files_analyzed",
+          "top_categories",
+          "sample_filenames"
+        ]
+      },
+      "max_retries": 1,
+      "step_index": 0,
+      "status": "failed",
+      "result": null,
+      "failure_reason": "Safe folder not found or unavailable: it",
+      "verification_result": {
+        "verified": false,
+        "reason": "Safe folder not found or unavailable: it",
+        "timestamp": "2026-04-13T23:18:09"
+      },
+      "retry_count": 1
+    }
+  ],
+  "current_step": 0,
+  "completed_steps": [],
+  "failed_steps": [
+    {
+      "step_index": 0,
+      "reason": "Safe folder not found or unavailable: it",
+      "timestamp": "2026-04-13T23:18:09"
+    }
+  ],
+  "retry_counts": {
+    "0": 1
+  },
+  "verification_results": {
+    "0": {
+      "verified": false,
+      "reason": "Safe folder not found or unavailable: it",
+      "timestamp": "2026-04-13T23:18:09"
+    }
+  },
+  "final_summary": "Goal: organize it\nObserved facts:\n- Planned tasks: 1\n- Verified completed tasks: 0\n- Unverified or failed tasks: 1\n\nGoal: organize it\nPlanned tasks:\n1. Preview folder organization for it -> preview_folder_organization\n\nExecution results:\n- Task 1 (preview_folder_organization): Safe folder not found or unavailable: it [verified=False; attempts=2; reason=Safe folder not found or unavailable: it]\n  error: Safe folder not found or unavailable: it\n\nOutcome:\n- The workflow did not reach verified completion."
+}

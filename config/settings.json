@@ -1,0 +1,11 @@
+{
+  "assistant_name": "Rogue Brain v2",
+  "mode": "zaza",
+  "autosave": true,
+  "scan_memory_on_start": true,
+  "scan_projects_on_start": true,
+  "log_actions": true,
+  "app_name": "Rogue Brain v2",
+  "max_memory_turns": 12,
+  "theme": "Dark"
+}

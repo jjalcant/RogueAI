@@ -1,0 +1,14 @@
+Python basics:
+
+Python uses indentation instead of braces.
+
+Common libraries:
+- numpy for numerical computing
+- pandas for data analysis
+- matplotlib for plotting
+- requests for HTTP requests
+
+Example function:
+
+def hello():
+    print("Hello world")

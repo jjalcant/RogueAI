@@ -1,0 +1,61 @@
+{
+  "task_id": 28,
+  "goal": "organize folders",
+  "status": "failed",
+  "created_at": "2026-04-10T22:20:51",
+  "updated_at": "2026-04-10T22:20:51",
+  "steps": [
+    {
+      "id": 1,
+      "title": "Preview folder organization for folders",
+      "tool_name": "preview_folder_organization",
+      "tool_input": {
+        "path_name": "folders",
+        "recursive": false
+      },
+      "verification": {
+        "type": "organization_preview_payload",
+        "required_sections": [
+          "path",
+          "scope",
+          "included_subfolders",
+          "total_files_analyzed",
+          "nested_files_analyzed",
+          "top_categories",
+          "sample_filenames"
+        ]
+      },
+      "max_retries": 1,
+      "step_index": 0,
+      "status": "failed",
+      "result": null,
+      "failure_reason": "Safe folder not found or unavailable: folders",
+      "verification_result": {
+        "verified": false,
+        "reason": "Safe folder not found or unavailable: folders",
+        "timestamp": "2026-04-10T22:20:51"
+      },
+      "retry_count": 1
+    }
+  ],
+  "current_step": 0,
+  "completed_steps": [],
+  "failed_steps": [
+    {
+      "step_index": 0,
+      "reason": "Safe folder not found or unavailable: folders",
+      "timestamp": "2026-04-10T22:20:51"
+    }
+  ],
+  "retry_counts": {
+    "0": 1
+  },
+  "verification_results": {
+    "0": {
+      "verified": false,
+      "reason": "Safe folder not found or unavailable: folders",
+      "timestamp": "2026-04-10T22:20:51"
+    }
+  },
+  "final_summary": "Goal: organize folders\nPlanned tasks:\n1. Preview folder organization for folders -> preview_folder_organization\n\nExecution results:\n- Task 1 (preview_folder_organization): Safe folder not found or unavailable: folders [verified=False; attempts=2; reason=Safe folder not found or unavailable: folders]\n\nOutcome: failure"
+}

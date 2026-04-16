@@ -1,0 +1,7 @@
+{
+  "name": "Jhonny",
+  "assistant_name": "Rogue Brain v2",
+  "mode": "zaza",
+  "languages": ["es", "en"],
+  "priority_style": "execution_first"
+}

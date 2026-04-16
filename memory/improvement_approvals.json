@@ -1,0 +1,24 @@
+{
+  "queue": [
+    {
+      "proposal_id": "imp_a51ce21f",
+      "history": [
+        {
+          "timestamp": "2026-04-15T14:41:38",
+          "status": "proposed",
+          "reason": "Proposal remains observational until evidence improves."
+        },
+        {
+          "timestamp": "2026-04-15T14:42:21",
+          "status": "ready_for_review",
+          "reason": "Confidence and scope justify operator review."
+        }
+      ],
+      "status": "ready_for_review",
+      "updated_at": "2026-04-15T15:18:40",
+      "reason": "Confidence and scope justify operator review.",
+      "execution_ready": false
+    }
+  ],
+  "updated_at": "2026-04-15T15:18:40"
+}

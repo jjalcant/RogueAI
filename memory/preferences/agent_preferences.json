@@ -1,0 +1,29 @@
+{
+  "safe_folder_aliases": [
+    "desktop",
+    "desktop folder",
+    "documentos",
+    "documents",
+    "documents folder",
+    "download",
+    "download folder",
+    "downloads",
+    "downloads folder",
+    "escritorio",
+    "images",
+    "music",
+    "music folder",
+    "my desktop",
+    "my documents",
+    "my downloads",
+    "pictures",
+    "pictures folder",
+    "videos",
+    "videos folder"
+  ],
+  "behavior_flags": {
+    "agent_read_only": true,
+    "allow_destructive_actions": false
+  },
+  "defaults": {}
+}

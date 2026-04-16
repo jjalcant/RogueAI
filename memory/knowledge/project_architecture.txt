@@ -1,0 +1,14 @@
+Typical software architecture:
+
+Frontend
+Backend
+Database
+
+Backend handles business logic.
+Frontend handles UI.
+Database stores persistent data.
+
+Common backend frameworks:
+- FastAPI
+- Django
+- Flask

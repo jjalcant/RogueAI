@@ -1,0 +1,121 @@
+{
+  "project_name": "RogueAI",
+  "updated_at": "2026-04-08T16:57:15",
+  "facts": {
+    "languages": [
+      {
+        "language": "Python",
+        "count": 3549
+      },
+      {
+        "language": "JSON",
+        "count": 594
+      }
+    ],
+    "config_files": [
+      "requirements.txt"
+    ],
+    "readme_files": [
+      "README.md"
+    ]
+  },
+  "inspection": {
+    "project_name": "RogueAI",
+    "path": "C:\\RogueAI",
+    "total_files": 10718,
+    "total_directories": 1282,
+    "top_level_entries": [
+      ".gitignore",
+      ".venv",
+      ".webui_secret_key",
+      "AGENTS.md",
+      "Code",
+      "Images",
+      "New folder",
+      "PLANS.md",
+      "README.md",
+      "STATUS.md",
+      "__pycache__",
+      "agent_loop.py",
+      "agents",
+      "app_config.py",
+      "autonomy",
+      "brain",
+      "brain.py",
+      "config",
+      "desktop_files.ps1",
+      "desktop_move.ps1"
+    ],
+    "languages": [
+      {
+        "language": "Python",
+        "count": 3549
+      },
+      {
+        "language": "JSON",
+        "count": 594
+      }
+    ],
+    "readme_files": [
+      "README.md"
+    ],
+    "config_files": [
+      "requirements.txt"
+    ],
+    "largest_files": [
+      {
+        "path": "C:\\RogueAI\\.venv\\Lib\\site-packages\\chromadb_rust_bindings\\chromadb_rust_bindings.pyd",
+        "name": "chromadb_rust_bindings.pyd",
+        "size_bytes": 59475456
+      },
+      {
+        "path": "C:\\RogueAI\\.venv\\Lib\\site-packages\\grpc\\_cython\\cygrpc.cp311-win_amd64.pyd",
+        "name": "cygrpc.cp311-win_amd64.pyd",
+        "size_bytes": 10764288
+      },
+      {
+        "path": "C:\\RogueAI\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd",
+        "name": "_rust.pyd",
+        "size_bytes": 9107968
+      },
+      {
+        "path": "C:\\RogueAI\\.venv\\Lib\\site-packages\\hf_xet\\hf_xet.pyd",
+        "name": "hf_xet.pyd",
+        "size_bytes": 8282112
+      },
+      {
+        "path": "C:\\RogueAI\\.venv\\Lib\\site-packages\\debugpy\\_vendored\\pydevd\\pydevd_attach_to_process\\inject_dll_x86.pdb",
+        "name": "inject_dll_x86.pdb",
+        "size_bytes": 5902336
+      }
+    ],
+    "newest_files": [
+      {
+        "path": "C:\\RogueAI\\.gitignore",
+        "name": ".gitignore",
+        "modified": "2026-04-06T15:51:43"
+      },
+      {
+        "path": "C:\\RogueAI\\.venv\\Lib\\site-packages\\chromadb-1.5.5.dist-info\\RECORD",
+        "name": "RECORD",
+        "modified": "2026-03-31T13:24:11"
+      },
+      {
+        "path": "C:\\RogueAI\\.venv\\Lib\\site-packages\\chromadb-1.5.5.dist-info\\REQUESTED",
+        "name": "REQUESTED",
+        "modified": "2026-03-31T13:24:11"
+      },
+      {
+        "path": "C:\\RogueAI\\.venv\\Lib\\site-packages\\chromadb-1.5.5.dist-info\\INSTALLER",
+        "name": "INSTALLER",
+        "modified": "2026-03-31T13:24:11"
+      },
+      {
+        "path": "C:\\RogueAI\\.venv\\Lib\\site-packages\\chromadb_rust_bindings\\__pycache__\\__init__.cpython-311.pyc",
+        "name": "__init__.cpython-311.pyc",
+        "modified": "2026-03-31T13:24:11"
+      }
+    ],
+    "truncated": true
+  }
+}

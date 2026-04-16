@@ -1,0 +1,807 @@
+# RogueAI Status
+
+## Completed Work
+
+- Implemented Operator Brain v1 as an additive orchestration layer above the existing router, planner, agent loop, tools, memory, and self-improvement stack without changing the supported runtime path:
+- `start_rogue.bat` remains the launcher
+- `rogue_app.py` remains the desktop entrypoint
+- `brain.py` remains secondary CLI support
+- What was wrong:
+- Rogue already had the necessary subsystems, but there was no single operator layer to classify request mode, inspect runtime state first, choose the safest execution path, normalize verification, and surface one operator-facing mission summary to the UI
+- final UI status could still be inferred from raw response wording instead of verified structured evidence, which allowed false failure-style messaging when the underlying payload actually succeeded
+- friction from repeated failures or verification mismatches was not being routed through one central operator checkpoint before reaching the existing improvement observer
+- What changed:
+- added new coordination modules:
+- `operator_modes.py`
+- `runtime_state.py`
+- `decision_policy.py`
+- `verification_policy.py`
+- `operator_brain.py`
+- `operator_modes.py` now classifies requests into:
+- `chat`
+- `direct_command`
+- `agent_task`
+- `diagnostic`
+- `improvement_review`
+- `experiment_review`
+- `safe_mode`
+- `runtime_state.py` now assembles a reusable runtime snapshot covering:
+- backend/model availability
+- tool and memory availability
+- active and resumable task state
+- recent failures
+- last action
+- self-improvement counts
+- approval queue counts
+- experiment summary
+- runtime health
+- `decision_policy.py` now provides a small inspectable routing layer that decides between:
+- direct operator response
+- existing router/direct command handling
+- planner -> task manager -> agent loop execution
+- runtime diagnostic summary
+- improvement review summary
+- experiment review summary
+- safe proposal-only handling
+- `verification_policy.py` now normalizes final operator-facing status into:
+- `verified_success`
+- `partial_success`
+- `blocked`
+- `failed`
+- `ready`
+- it also flags verification mismatches when raw response wording looks like failure but the verified payload indicates success
+- `operator_brain.py` now coordinates the request lifecycle:
+- snapshot runtime state before acting
+- classify operating mode
+- choose the execution path conservatively
+- execute via the existing router or agent workflow when appropriate
+- verify the outcome from structured evidence
+- route mismatches or repeated friction into the existing improvement observer
+- store a mission summary for backend/UI consumption
+- `ui_qt/backend.py` now routes `process_input()` through Operator Brain and uses the normalized verification result to drive operator status instead of relying only on raw response text
+- `rogue_app.py` now routes desktop request processing through the same Operator Brain layer so the supported entrypoint and Tk fallback share the same orchestration behavior
+- `ui_qt/backend.py` Command Center payloads now expose:
+- current mode
+- current mission
+- runtime health
+- verification status
+- recommended next action
+- one combined operator summary text
+- `ui_qt/backend.py` Explain Mode payloads now carry the current operator mode, verification status, runtime health, and recommended next action alongside the existing goal/plan/result data
+- added focused regression coverage in `tests/test_operator_brain.py` for:
+- mode selection
+- runtime state assembly
+- decision policy routing
+- verification status normalization
+- improvement routing triggers
+- extended `tests/test_ui_qt_backend.py` so the backend payload contract explicitly covers operator-summary exposure for Command Center and Explain Mode
+- Why the change was made:
+- this turns Rogue into a coordinated local operator system without rewriting the planner, agent loop, tool registry, UI framework, or self-improvement architecture
+- the new layer stays conservative: it reuses current systems, avoids uncontrolled autonomy, keeps unsafe self-modification requests in proposal-only mode, and makes final status depend on verified evidence instead of raw wording
+- Validation completed:
+- `python -m py_compile operator_modes.py decision_policy.py runtime_state.py verification_policy.py operator_brain.py ui_qt\backend.py rogue_app.py tests\test_operator_brain.py tests\test_ui_qt_backend.py`
+- `python -m unittest tests.test_operator_brain tests.test_ui_qt_backend`
+- `python -m unittest tests.test_rogue_launcher tests.test_router`
+- `python -m unittest tests.test_improvement_layer`
+- Remaining risks:
+- mode classification is intentionally heuristic and conservative; unusual phrasing may still fall back to the router instead of selecting a more specialized operator mode
+- the operator summary is exposed cleanly through backend payloads, but the existing UI layouts were not redesigned in this pass; additional visual emphasis would be a separate UI change
+- Audited the Operator Brain v1 request against the live Rogue desktop/runtime path and confirmed the supported launcher flow remains `start_rogue.bat` -> `rogue_app.py`, with `brain.py` still serving as secondary CLI support
+- Identified the smallest safe implementation surface for this pass:
+- new orchestration modules:
+- `operator_brain.py`
+- `runtime_state.py`
+- `operator_modes.py`
+- `decision_policy.py`
+- `verification_policy.py`
+- existing integration seams:
+- `rogue_app.py`
+- `ui_qt/backend.py`
+- focused backend/operator tests
+- What is currently missing:
+- there is no single operator-layer coordinator that classifies request mode, snapshots runtime state, selects the safest execution path, verifies final status, and routes repeated friction into the existing improvement stack
+- the UI already has operator-facing panels, but they are still assembled from separate backend fragments instead of one central mission/runtime summary
+- Why this audit was recorded first:
+- the repository workflow requires `PLANS.md` and `STATUS.md` to be updated before implementation
+- documenting the exact additive scope keeps the upcoming change constrained and avoids accidental planner/router rewrites
+- Stabilized and hardened the active PySide6 shell without changing the supported runtime path or routing architecture:
+- `start_rogue.bat` remains the launcher
+- `rogue_app.py` remains the desktop entrypoint
+- `brain.py` remains secondary CLI support
+- What was wrong:
+- the shell header still exposed framework text instead of Rogue product text
+- the Chat summarizer could fall back to raw structured output and did not enforce verified-field-only rendering for system information
+- the dedicated `system_info` tool requested for the desktop/runtime contract did not exist as a first-class tool entry
+- router aliases for common system-information phrasing were incomplete
+- transcript bottom anchoring could drift slightly upward after layout/animation updates
+- quick-command labels were still lower-case command phrases
+- What changed:
+- `ui_qt/main_window.py` now shows the product-facing subtitle `Local System Intelligence`
+- `ui_qt/backend.py` now:
+- exposes title-case quick command labels while preserving the same command text underneath
+- formats `system_info` / `get_system_info` Chat replies only from verified payload fields
+- treats placeholder-looking values such as `[Insert Operating System]` as missing instead of displaying them
+- returns a deterministic command-guidance fallback when required verified system fields are absent
+- omits missing platform/system fields from workspace summaries instead of fabricating `unknown`
+- blocks raw Chat fallback text from exposing agent-only section headers such as `Goal:` or `Observed facts:`
+- `ui_qt/chat_view.py` now re-applies `verticalScrollBar().setValue(verticalScrollBar().maximum())` after layout updates when the user was already at the bottom, eliminating the slight upward jump without breaking older-message reading behavior
+- `tools/system_info.py` now provides a dedicated verified local system-info collector using standard-library sources plus optional local enhancement where available
+- it returns real fields for:
+- `Operating System`
+- `CPU`
+- `RAM`
+- `GPU` when discoverable
+- `Disk summary`
+- it also preserves legacy compatibility fields such as `platform`, `python_version`, and `cwd`
+- `tool_registry.py` now registers both `system_info` and legacy-compatible `get_system_info`
+- `tools/system_tool.py` now delegates legacy `get_system_info()` calls to the new shared collector instead of maintaining duplicate logic
+- `brain/router.py` now routes these aliases to the dedicated `system_info` tool:
+- `system info`
+- `system specs`
+- `pc info`
+- `computer info`
+- Why the change was made:
+- this keeps the existing PySide6 layout, backend routing, planner, tool registry, verification path, and Agent view intact while removing UI/framework leakage, preventing fabricated system data, and making the desktop shell deterministic and safer
+- Added and updated regression coverage for:
+- verified system-info Chat formatting
+- missing/placeholder system-info fallback behavior
+- raw agent-only section suppression in Chat
+- title-case quick command labels
+- router alias coverage for `pc info`
+- true-bottom scroll anchoring after message append
+- header subtitle validation without framework text
+- dedicated system-info tool payload coverage plus legacy alias coverage
+- Validation completed:
+- `python -m py_compile ui_qt\main_window.py ui_qt\backend.py ui_qt\chat_view.py brain\router.py tool_registry.py tools\system_info.py tools\system_tool.py tests\test_ui_qt_backend.py tests\test_ui_qt_chat_view.py tests\test_ui_qt_main_window.py tests\test_router.py tests\test_tool_registry.py tests\test_system_info.py`
+- `$env:QT_QPA_PLATFORM='offscreen'; python -m unittest tests.test_ui_qt_backend tests.test_ui_qt_chat_view tests.test_ui_qt_main_window tests.test_router tests.test_tool_registry tests.test_system_info`
+- Real system-info command path exercised with verified local output for:
+- Operating System: `Windows 10`
+- CPU: `AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD`
+- RAM: `31.2 GB`
+- Disk summary: `C:\ | 587.6 GB used of 951.6 GB`
+- GPU on this machine resolved as `Meta Virtual Monitor`
+- Remaining risk:
+- GPU detection is best-effort and currently relies on locally available system reporting; when the machine does not expose a GPU name, Chat will omit that line rather than invent a value
+- Audited the current PySide6 hardening request against the supported runtime path and confirmed the intended launcher flow remains `start_rogue.bat` -> `rogue_app.py`, with `brain.py` still serving as secondary CLI support
+- Identified the smallest safe implementation surface for this pass:
+- `ui_qt/main_window.py`
+- `ui_qt/backend.py`
+- `ui_qt/chat_view.py`
+- `brain/router.py`
+- `tool_registry.py`
+- new `tools/system_info.py`
+- focused Qt/router/tool tests plus compile validation
+- What was wrong:
+- the header still exposed framework naming in the operator shell
+- Chat summary generation did not yet enforce verified-field-only rendering for system information
+- the dedicated `system_info` tool requested by the runtime contract did not yet exist as a first-class registry entry
+- router aliases for common system-information requests were incomplete
+- the transcript scroll path could still land slightly above the true bottom after message/layout updates
+- quick-command labels were still raw lower-case command phrases instead of normalized UI labels
+- What changed so far:
+- recorded a dedicated Phase 29 stabilization plan in `PLANS.md`
+- documented the audit findings and constrained implementation scope before code changes
+- Why this was done first:
+- the repository workflow requires `PLANS.md` and `STATUS.md` to be updated before implementation
+- keeping the plan explicit helps preserve the existing architecture while we make only the minimum hardening edits needed
+- Fixed the PySide6 typed-chat transcript ordering defect so every non-empty user submission is visible before Rogue responds, including exact commands, greetings, and fallback conversational input:
+- `ui_qt/chat_view.py` now appends the user message to the transcript before inserting the transient Rogue pending row
+- `ui_qt/main_window.py` now dispatches typed chat submissions through the backend without re-emitting the same user row into the Qt transcript
+- `ui_qt/backend.py` now records typed user submissions in backend message history before command routing, while avoiding duplicate router-memory or transcript emission on the typed-submit path
+- What was wrong:
+- typed submissions could show Rogue pending or final fallback output without the corresponding user message appearing first in the transcript
+- the issue was caused by the chat view rendering pending feedback immediately while the typed backend path either skipped user-message emission or suppressed it during router fallback
+- What changed:
+- user rows are inserted first for every non-blank typed submission
+- backend history now records the same user submission for typed exact-command and fallback paths
+- router fallback from `execute_chat_input()` now skips duplicate user-memory recording because the typed path already captured that turn
+- Why the change was made:
+- this guarantees transcript coherence and removes the last path where Rogue could reply without the user’s visible input immediately above it
+- blank-input suppression, selectable/copyable transcript widgets, command execution behavior, routing behavior, and the existing Qt layout/styling were preserved
+- Added and updated regression coverage for:
+- exact command input showing user message plus Rogue response
+- greeting input showing user message plus Rogue response
+- unknown non-empty input showing user message plus Rogue fallback response
+- blank input remaining a no-op
+- Qt integration coverage confirming typed submissions render one user row followed by Rogue output without duplication
+- Validation completed:
+- `python -m py_compile ui_qt\chat_view.py ui_qt\main_window.py ui_qt\backend.py tests\test_ui_qt_chat_view.py tests\test_ui_qt_main_window.py tests\test_ui_qt_backend.py`
+- `python -m unittest tests.test_ui_qt_chat_view tests.test_ui_qt_main_window tests.test_ui_qt_backend`
+- `$env:QT_QPA_PLATFORM='offscreen'; python -c "from PySide6.QtCore import QTimer; from PySide6.QtWidgets import QApplication; from ui_qt.main_window import RogueMainWindow; app = QApplication([]); window = RogueMainWindow(); QTimer.singleShot(0, app.quit); window.show(); app.exec(); print('qt smoke ok')"`
+- Remaining risk:
+- this pass fixes the typed submit path; quick-command buttons already preserve user-first ordering through the router path, but they still use their separate execution flow and were not otherwise redesigned in this change
+- Fixed the PySide6 chat response animation so only the newest Rogue reply updates during typing instead of repainting the full transcript:
+- replaced the full-document `QTextBrowser.setHtml()` animation loop in `ui_qt/chat_view.py`
+- introduced per-message transcript cards backed by dedicated read-only text widgets so older messages are not rebuilt during response rendering
+- preserved the current dark operator-console chat layout while moving the animation work onto only the newest Rogue message block
+- Stabilized the temporary thinking state and progressive rendering behavior:
+- the pending Rogue state still appears immediately after typed chat submission
+- once verified backend text exists, only the pending/newest Rogue bubble is mutated during typing
+- the animation reveals text in chunked, line-aware steps instead of a slow character-by-character crawl
+- very large outputs now animate only an initial portion before committing the rest immediately so long reports remain usable
+- Stabilized transcript scrolling:
+- autoscroll now happens only when the user is already near the bottom
+- the chat no longer force-jumps to the bottom on every typing tick when the user is reading older messages
+- bottom-edge flicker from repeated full transcript rebuilds is removed with the per-message update path
+- Preserved copy/select behavior and backend correctness:
+- final response text remains in read-only Qt text widgets and stays selectable/copyable after rendering completes
+- only verified backend text is animated; no fabricated content is inserted during the effect
+- `ui_qt/backend.py` command routing, tool execution, and response generation behavior were left unchanged
+- Expanded `tests/test_ui_qt_chat_view.py` to validate:
+- immediate pending feedback
+- newest-message-only animation behavior
+- large-output fast-path rendering
+- non-forced scroll while reading older transcript content
+- Validation completed for the PySide6 animation stabilization pass:
+- `python -m py_compile C:\RogueAI\ui_qt\chat_view.py C:\RogueAI\ui_qt\main_window.py C:\RogueAI\tests\test_ui_qt_chat_view.py`
+- `python -m unittest tests.test_ui_qt_chat_view tests.test_ui_qt_backend`
+- `$env:QT_QPA_PLATFORM='offscreen'; python -c "from PySide6.QtCore import QTimer; from PySide6.QtWidgets import QApplication; from ui_qt.main_window import RogueMainWindow; app = QApplication([]); window = RogueMainWindow(); QTimer.singleShot(0, app.quit); window.show(); app.exec(); print('qt smoke ok')"`
+- Remaining limitation:
+- the lower quick-command buttons still use their existing execution path and do not inject the same transient pending bubble before the backend starts
+- Audited the first PySide6 typing pass and isolated the flicker/jump regression to the current transcript rendering strategy in `ui_qt/chat_view.py`:
+- each animation tick rebuilds the full transcript HTML with `setHtml()`
+- the full-document rewrite repaints older messages, causes visible flicker, and forces the scrollbar to the bottom
+- Recorded a dedicated Phase 26 stabilization pass in `PLANS.md` to move the animation onto only the newest Rogue response block, preserve the existing operator-console look, and add stable near-bottom autoscroll behavior
+- Added lightweight response feedback to the active PySide6 chat surface without changing backend routing or tool execution behavior:
+- `ui_qt/chat_view.py` now inserts an immediate transient Rogue pending row when typed chat input is submitted
+- the pending label is deterministic and command-shaped where safe, such as `Analyzing desktop...`, `Checking system status...`, `Generating report...`, or the fallback `Thinking...`
+- the pending row is presentation-only and does not fabricate tool or model output
+- Added progressive verified-response rendering in `ui_qt/chat_view.py`:
+- once a real Rogue payload arrives, the pending row is replaced and the exact verified text is revealed in small chunks
+- the animation operates only on text that already exists in the backend payload
+- the final transcript remains in the existing `QTextBrowser`, so the completed response stays selectable and copyable
+- Kept the UI stable for command paths that do not emit a chat reply:
+- `ui_qt/main_window.py` now yields one Qt event turn before executing the backend so the pending state paints immediately
+- after command completion it clears stale pending placeholders when the command navigates or otherwise finishes without a Rogue chat message
+- Preserved the supported runtime path and backend semantics:
+- launcher remains `start_rogue.bat` -> `rogue_app.py`
+- backend controller logic in `ui_qt/backend.py` was left unchanged
+- command registry, router flow, and tool execution logic were not modified
+- Added focused Qt validation in `tests/test_ui_qt_chat_view.py` for:
+- immediate pending feedback on submit
+- progressive reveal completing to the exact verified response text
+- stale placeholder cleanup when no reply is produced
+- Validation completed for the PySide6 chat feedback pass:
+- `python -m py_compile C:\RogueAI\ui_qt\chat_view.py C:\RogueAI\ui_qt\main_window.py C:\RogueAI\tests\test_ui_qt_chat_view.py`
+- `python -m unittest tests.test_ui_qt_chat_view tests.test_ui_qt_backend`
+- `$env:QT_QPA_PLATFORM='offscreen'; python -c "from PySide6.QtCore import QTimer; from PySide6.QtWidgets import QApplication; from ui_qt.main_window import RogueMainWindow; app = QApplication([]); window = RogueMainWindow(); QTimer.singleShot(0, app.quit); window.show(); app.exec(); print('qt smoke ok')"`
+- Remaining limitation:
+- typed chat submissions now show the new pending state, but the lower quick-command buttons still use the existing immediate execution path and do not yet inject the same transient feedback row
+- Audited the live PySide6 chat runtime path for the response-feedback change and confirmed the supported launcher flow remains `start_rogue.bat` -> `rogue_app.py`, with the active Qt chat surface implemented through:
+- `ui_qt/main_window.py`
+- `ui_qt/chat_view.py`
+- `ui_qt/backend.py`
+- Identified the smallest safe implementation surface as a Qt presentation-layer change only:
+- add a transient pending reply row immediately after chat submission
+- progressively render only already-verified backend text
+- preserve the current backend/controller/router/tool behavior without changing command execution semantics
+- Recorded a dedicated Phase 25 plan in `PLANS.md` for lightweight PySide6 chat response feedback, including placeholder cleanup for no-reply commands and focused Qt validation
+- Repaired the PySide6 false-fallback startup path with the smallest safe change set:
+- `start_rogue.bat` no longer unconditionally activates `.venv`
+- the launcher now probes which interpreter can import `from ui_qt.main_window import launch_qt_app`
+- it prefers `.venv\Scripts\python.exe` when that interpreter can launch the Qt path
+- it otherwise keeps the active `python` interpreter when that interpreter can launch the Qt path
+- it falls back to `.venv\Scripts\python.exe` only when neither interpreter can import the Qt launcher, preserving the existing legacy Tk path
+- Tightened the Python-side Qt availability handling in `rogue_app.py`:
+- added a narrow `_is_pyside6_missing()` check so only genuine `PySide6` import failures trigger the Tk fallback
+- stopped treating unrelated `ModuleNotFoundError` cases as `PySide6 unavailable`
+- added explicit `PySide6 import failed: ...` output before intentional Tk fallback
+- added explicit `PySide6 startup failed: ...` output when Qt imports successfully but runtime startup still fails
+- added traceback printing in the top-level `__main__` error path so real startup failures stay visible
+- Expanded `tests/test_rogue_launcher.py` to cover:
+- genuine `PySide6`-missing fallback messaging
+- unrelated module import failures propagating normally
+- Qt startup exceptions surfacing instead of silently falling back
+- launcher batch logic containing the Qt-import interpreter probe
+- Validation completed for the PySide6 launcher repair:
+- `python -m py_compile rogue_app.py tests\test_rogue_launcher.py`
+- `python -m unittest tests.test_rogue_launcher`
+- `python -m unittest tests.test_rogue_launcher tests.test_ui_qt_backend tests.test_startup_and_config`
+- `python -c "import os; os.environ['QT_QPA_PLATFORM']='offscreen'; from PySide6.QtCore import QTimer; from PySide6.QtWidgets import QApplication; from ui_qt.main_window import RogueMainWindow; app = QApplication([]); window = RogueMainWindow(); QTimer.singleShot(0, app.quit); window.show(); app.exec(); print('qt smoke ok')"`
+- `python -c "import sys; import PySide6; print(sys.executable); print(PySide6.__version__)"`
+- `.venv\Scripts\python.exe -c "from ui_qt.main_window import launch_qt_app"`
+- `cmd` probe of the batch selection logic now resolves to `chosen=python` on this machine because the active interpreter can import the Qt launcher and `.venv` cannot
+- Remaining risk:
+- `.venv` still does not currently include `PySide6`, so anyone relying on `.venv` as the sole runtime should either install `PySide6` there or continue using the active interpreter path now selected by `start_rogue.bat`
+- Audited the supported desktop runtime path for the PySide6 false-fallback defect and confirmed the primary launcher remains `start_rogue.bat` -> `rogue_app.py`, with `brain.py` as secondary CLI support
+- Reproduced the defect on the current machine and isolated the root cause to interpreter selection rather than the Qt widget imports themselves:
+- `python -c "import PySide6; print(PySide6.__version__)"`
+- `python -c "from ui_qt.main_window import launch_qt_app; print('qt launcher import ok')"`
+- `.venv\Scripts\python.exe -c "import PySide6"`
+- `.venv\Scripts\python.exe -c "from ui_qt.main_window import launch_qt_app"`
+- Confirmed `rogue_app.py` currently only falls back on `ModuleNotFoundError`, while `start_rogue.bat` unconditionally activates `.venv` when present, causing Rogue to launch under an interpreter that does not currently provide `PySide6`
+- Updated `PLANS.md` before implementation with a dedicated launcher-repair phase covering interpreter selection, narrower Qt fallback logic, visible exception reporting, focused tests, and validation scope
+- Added a side-by-side PySide6 desktop UI under `ui_qt/` instead of rewriting the backend or deleting the Tkinter implementation:
+- `ui_qt/backend.py`
+- `ui_qt/main_window.py`
+- `ui_qt/sidebar.py`
+- `ui_qt/chat_view.py`
+- `ui_qt/agent_view.py`
+- `ui_qt/help_view.py`
+- `ui_qt/settings_view.py`
+- `ui_qt/theme.py`
+- Preserved the existing backend command and agent path by keeping:
+- `brain/router.py` unchanged
+- `ui_command_registry.py` unchanged
+- tool implementations unchanged
+- planner/task/agent-loop behavior unchanged
+- Implemented a Qt-compatible backend controller that presents the same app surface the router and command registry expect, including:
+- pending confirmation state
+- conversation memory
+- command registry execution
+- router-backed command dispatch
+- agent loop controls
+- task clipboard helpers
+- settings persistence
+- backend/model status refresh
+- Migrated the supported launcher path to prefer PySide6 without breaking incremental rollout:
+- `start_rogue.bat` still launches `rogue_app.py`
+- `rogue_app.py` now prefers the Qt shell
+- the legacy Tkinter app remains available through fallback or `ROGUE_UI=tk`
+- Replaced the Tk-only shell with a new Qt command-center layout that provides:
+- top header bar
+- left sidebar navigation
+- central stacked pages for `Chat`, `Agent`, `Help`, and `Settings`
+- a full-height selectable chat transcript
+- a fixed bottom input composer with `Send`
+- stable resize behavior without the old stacked dashboard crowding the chat area
+- Implemented the `Agent` page with:
+- agent mode selector
+- start/stop/run-cycle controls
+- live loop metrics
+- plan preview
+- recent activity
+- task-state summary
+- Implemented the `Help` page as a selectable categorized command reference generated from the existing desktop command model
+- Implemented the `Settings` page with:
+- persistent theme switching
+- runtime model selection against the existing Ollama bridge
+- app name editing
+- max-memory-turns editing
+- backend status details
+- Added a reusable Qt stylesheet using the requested command-center palette and applied it across the new shell
+- Updated dependencies to include `PySide6>=6.7,<7`
+- Added focused validation coverage for the new migration surface:
+- `tests/test_ui_qt_backend.py`
+- `tests/test_rogue_launcher.py`
+- Installed `PySide6` locally for validation and confirmed the real Qt runtime is available:
+- `python -c "import PySide6; print(PySide6.__version__)"`
+- Validation completed for the PySide6 migration pass:
+- `python -m py_compile ui_qt\backend.py ui_qt\theme.py ui_qt\sidebar.py ui_qt\chat_view.py ui_qt\agent_view.py ui_qt\help_view.py ui_qt\settings_view.py ui_qt\main_window.py rogue_app.py tests\test_ui_qt_backend.py tests\test_rogue_launcher.py`
+- `python -m unittest tests.test_ui_qt_backend tests.test_rogue_launcher tests.test_router tests.test_desktop_command_registry tests.test_startup_and_config`
+- `$env:QT_QPA_PLATFORM='offscreen'; python -c "from PySide6.QtCore import QTimer; from PySide6.QtWidgets import QApplication; from ui_qt.main_window import RogueMainWindow; app = QApplication([]); window = RogueMainWindow(); QTimer.singleShot(0, app.quit); window.show(); app.exec(); print('qt smoke ok')"`
+- Remaining known limitations after this migration:
+- the legacy Tkinter implementation still exists intentionally for fallback safety and has not been removed yet
+- desktop command results that previously rendered into Tk-specific preview cards now surface as chat/help/agent content in the Qt shell rather than reproducing the old Tk card renderer
+- runtime model selection updates the active `brain.llm_bridge.MODEL` for the running session and is not yet persisted as a separate config field
+- Audited the PySide6 migration scope against the supported runtime path and confirmed the primary launcher remains `start_rogue.bat` -> `rogue_app.py` with `brain.py` as secondary CLI support
+- Confirmed the current desktop UI is still fully Tkinter-based inside `rogue_app.py`, while backend routing remains reusable through:
+- `brain/router.py`
+- `ui_command_registry.py`
+- `app_config.py`
+- `brain/auto_loop.py`
+- `brain/agent_state.py`
+- Identified the smallest safe migration surface as:
+- a Qt-side desktop controller that presents the same app context expected by the router
+- a new `ui_qt/` shell and page modules
+- a launcher update in `rogue_app.py` that prefers Qt and retains Tkinter as a fallback
+- Confirmed the existing backend baseline still passes before UI changes:
+- `python -m unittest tests.test_router tests.test_desktop_command_registry`
+- Confirmed the current environment does not yet have `PySide6` installed:
+- `python -c "import PySide6; print(PySide6.__version__)"`
+- Updated `PLANS.md` before implementation with a dedicated PySide6 migration phase covering the Qt controller, stacked-shell UI, launcher strategy, dependency changes, and validation scope
+- Implemented a shared anti-hallucination result contract in `result_contract.py` so tool and command-response paths now standardize on explicit evidence fields:
+- `success`
+- `action`
+- `observed`
+- `artifacts`
+- `warnings`
+- `errors`
+- `inferences`
+- `suggestions`
+- Hardened `tool_registry.py` so legacy tool outputs are normalized through the shared contract instead of being treated as implicit success summaries
+- Updated the highest-risk tool surfaces to stop overstating unverifiable outcomes:
+- `tools/system_tool.py`
+- `tools/browser_tool.py`
+- `tools/projects_tool.py`
+- `tools/files_tool.py`
+- Replaced optimistic wording such as `Opened folder`, `Application launched`, and `Command executed.` with evidence-backed wording such as:
+- verified path exists
+- open request sent without immediate exception
+- command exited with code `N`
+- no stdout was returned
+- Added verified artifact metadata for filesystem operations so Rogue only claims folder/file creation, copy, move, or deletion when the post-action filesystem state confirms it
+- Updated `brain/router.py` so structured command responses are remembered and rendered through the shared formatter instead of freeform summary strings where tool evidence is available
+- Updated `agent_loop.py` so workflow closeout text reports verified completion state and task verification counts instead of generic success/failure phrasing alone
+- Updated `task_manager.py` task detail formatting so status is presented as persisted execution state rather than implied completion prose
+- Updated `rogue_app.py` so the desktop preview can render structured command results directly from stored payload data, and adjusted local open-result UI wording to `open request sent` instead of claiming visible success
+- Updated and expanded tests to verify Rogue does not fabricate success when evidence is absent, including:
+- filesystem create/copy/move/delete verification
+- command execution with missing stdout
+- structured formatter fallback for missing evidence
+- structured preview rendering from router payloads
+- Validation completed for the anti-hallucination hardening pass:
+- `python -m py_compile result_contract.py tool_registry.py agent_loop.py task_manager.py tasks\task_queue.py brain\router.py tools\projects_tool.py tools\system_tool.py tools\browser_tool.py tools\files_tool.py rogue_app.py tests\test_files_tool.py tests\test_system_tool.py tests\test_router.py tests\test_tool_registry.py tests\test_agent_loop.py tests\test_desktop_command_registry.py`
+- `python -m unittest tests.test_files_tool tests.test_system_tool tests.test_router tests.test_tool_registry tests.test_agent_loop tests.test_desktop_command_registry`
+- `python -m unittest tests.test_task_manager tests.test_planner tests.test_inspection_tool tests.test_startup_and_config`
+- `python -m unittest discover -s tests`
+- `python -c "import rogue_app; print('rogue_app import ok')"`
+- `python -c "from pathlib import Path; from app_config import run_startup_checks; base = Path('.').resolve(); report = run_startup_checks([base / 'memory', base / 'projects', base / 'agents', base / 'autonomy', base / 'config', base / 'logs'], base / 'config' / 'settings.json', base / 'config' / 'modules.json'); print('startup checks ok' if isinstance(report, dict) and report.get('settings') is not None else 'startup checks missing')"`
+- Audited the anti-hallucination hardening scope against the supported runtime path and confirmed the primary launcher remains `start_rogue.bat` -> `rogue_app.py` with `brain.py` as secondary CLI support
+- Identified the current evidence-risk surface as narrowly scoped to:
+- formatter paths that flatten structured results into generic prose
+- legacy tools that still return plain strings or weak success markers
+- agent/task summaries that can imply completion without surfacing verification state
+- desktop preview rendering that prefers friendly summary text over explicit evidence buckets
+- Updated `PLANS.md` before implementation with a dedicated anti-hallucination hardening phase covering the structured result contract, formatter changes, UI rendering, test scope, and validation path
+- Audited the current desktop runtime path for the Settings/theme interaction pass and confirmed the supported launcher remains `start_rogue.bat` -> `rogue_app.py` with `brain.py` as secondary CLI support
+- Identified the current UI defect surface in `rogue_app.py` as narrowly scoped to:
+- placeholder-only Settings theme display
+- no persisted appearance preference
+- generic read-only text context menu behavior that still exposes edit actions on output widgets
+- missing reliable `Ctrl+C` selection handling for chat/output text
+- Updated `PLANS.md` before implementation with a dedicated theme/text stabilization phase covering appearance controls, theme persistence, read-only text copy behavior, context menus, and validation scope
+- Expanded `app_config.py` so the existing `config/settings.json` now supports a persisted `theme` field with a stable default of `Light`
+- Refined the existing `Settings` section in `rogue_app.py` without changing the shell structure:
+- kept `Chat`, `Agent`, `Help`, and `Settings` intact
+- replaced the placeholder theme row with a functional `Appearance` card
+- added working `Light` / `Dark` theme controls
+- added visible font-size status while keeping font scaling fixed for stability
+- kept runtime/config summary cards for mode, model, app name, and memory turns
+- Added a clean two-palette theme system in `rogue_app.py` and applied it through the current Tkinter UI without touching backend routing or agent logic
+- Implemented in-place theme switching and persistence so the desktop remembers the selected appearance on restart
+- Updated chat/output interaction so read-only transcript and output text widgets now:
+- keep text selectable with the mouse
+- support `Ctrl+C` copy
+- support `Ctrl+A` select-all
+- remain non-editable
+- use right-click menus that only expose appropriate actions for output widgets
+- Added improved context menus by area:
+- output/chat: `Copy`, `Select All`, and `Clear Chat` for the chat transcript
+- command input: `Copy`, `Paste`, `Cut`, `Select All`, and `Clear`
+- Replaced the remaining hardcoded light-only colors in the active chat/confirmation surfaces and chat tags with theme-driven values so Dark Mode stays readable and restrained
+- Validation completed for this pass:
+- `python -m py_compile rogue_app.py app_config.py tests\test_startup_and_config.py tests\test_desktop_command_registry.py`
+- `python -m unittest tests.test_startup_and_config tests.test_desktop_command_registry`
+- `python -c "import rogue_app; import app_config; print('import ok')"`
+- Refactored `rogue_app.py` from a single crowded Home/dashboard layout into a multi-view desktop shell with:
+- fixed top bar
+- collapsible left sidebar
+- stacked main content views switched with a dedicated view-raise helper
+- Recentered the desktop around a Chat-first landing experience:
+- moved the command composer to the bottom of the Chat view
+- kept the conversation transcript as the primary surface
+- kept structured preview rendering in Chat without showing the full Agent control panel there
+- Reworked the fixed top bar to keep only:
+- app title `Rogue`
+- global `Run Task`
+- global `Clear Chat`
+- active task indicator
+- Removed the previous top-row `Back / Home / Help` navigation controls and moved primary navigation to the new left sidebar
+- Added a simple collapsible/future-friendly left sidebar with dedicated navigation entries for `Chat`, `Agent`, `Help`, and `Settings`
+- Moved the autonomous loop controls and state display into a dedicated scrollable `Agent` view while preserving:
+- Start Agent
+- Stop Agent
+- Run One Cycle
+- mode selector
+- running status
+- current mode
+- interval
+- cycle timing
+- observation summary
+- generated plan
+- approved tasks
+- blocked tasks
+- last result
+- last error
+- Added a dedicated scrollable `Help` view with command reference, agent-mode explanations, safety notes, and brief usage guidance
+- Added a dedicated `Settings` view with visible current values/placeholders for theme, font size, default mode, and model name
+- Preserved backend behavior by keeping router, planner, task manager, preview rendering, shared agent state, and autonomous loop logic unchanged
+- Added light user-facing cleanup for agent-plan/tool labels so the Agent view and chat transcript avoid exposing raw internal identifiers where practical
+- Updated desktop-focused tests to cover the dedicated Help and Settings navigation and the friendlier agent-plan formatting
+- Audited the repository for the multi-view desktop-shell refactor and confirmed the supported runtime path remains `start_rogue.bat` -> `rogue_app.py` with `brain.py` as secondary CLI support
+- Identified the current Tkinter defect surface in `rogue_app.py`: chat, help, agent control, preview content, and legacy sidebar/navigation helpers are still organized around a single crowded Home/dashboard body rather than dedicated views
+- Confirmed the requested refactor can stay largely UI-local to `rogue_app.py` plus focused tests, preserving router, planner, task, tool, memory, and autonomous-loop backend behavior
+- Updated `PLANS.md` before implementation with a dedicated multi-view shell phase covering the fixed top bar, left sidebar, stacked content views, Chat-first landing view, dedicated Agent/Help/Settings sections, scroll behavior, and validation scope
+- Audited the desktop runtime path for the Home-screen stabilization pass and confirmed the supported launcher remains `start_rogue.bat` -> `rogue_app.py` with `brain.py` as secondary CLI support
+- Identified the current Home overflow surface in `rogue_app.py`: the header/command area is already separated while the main dashboard blocks are stacked directly on `main_frame`, causing clipping pressure at smaller window heights
+- Confirmed the requested Home usability pass can remain UI-local to `rogue_app.py` plus focused tests without altering router, planner, task, tool, memory, or autonomous-loop backend behavior
+- Updated `PLANS.md` before implementation with a dedicated Home dashboard stabilization phase covering scroll-safe layout, compact Agent Control rows, output-space rebalancing, and resize behavior
+- Refactored the Home dashboard in `rogue_app.py` so the top header and command bar remain fixed while the main Home body now lives inside a vertically scrollable `Canvas` + `Scrollbar` container
+- Added dynamic Home scrollregion updates on content resize and canvas width changes, plus mouse-wheel scrolling for the Home body without changing preview/result or chat backend behavior
+- Kept the current Home dashboard structure intact with the existing blocks preserved:
+- header
+- command bar
+- system status / conversation area
+- agent control
+- rogue response
+- Compacted the Agent Control panel by replacing the taller status-card stack with denser summary rows while preserving running status, mode, interval, cycle timing, observation, plan, approvals, blocked tasks, last result, and last error
+- Increased the default Rogue Response canvas height so output gets more vertical space relative to the Agent Control panel
+- Adjusted desktop window sizing to a smaller-but-still-safe default geometry and minimum size so the Home screen is usable sooner on first launch and remains scroll-safe at reduced window sizes
+- Added focused Home-layout tests covering the new window-size targets, Home mouse-wheel scrolling, Home canvas width/scrollregion updates, and scroll-binding exclusions for nested preview/chat widgets
+- Implemented the desktop usability refinement pass in `rogue_app.py` without changing router, planner, task, tool, or autonomous-loop backend behavior
+- Removed the duplicate bottom command input row and standardized desktop command entry on the top `Ask Rogue` composer
+- Moved `Clear Chat` into the top toolbar next to `Run Task`
+- Increased the desktop default geometry to `1400x900` and the minimum size to `1200x750`
+- Added `config/ui_state.json` persistence for window geometry so size and position are restored across launches
+- Switched the desktop font preference to `Segoe UI` first and normalized the main title, section headers, and body text sizing to the requested readability targets
+- Replaced the top single-line command entry with a multiline command composer that supports:
+- `Enter` to execute
+- `Shift+Enter` to insert a newline
+- Up/Down command history navigation
+- Expanded right-click context menus across the main command composer and read-only text output panels with:
+- Copy
+- Paste
+- Cut
+- Select All
+- Clear
+- Increased vertical spacing between the major desktop panels while preserving the current Rogue layout structure
+- Added color-coded agent status indication in the Agent Control header and running-status card:
+- Running = green
+- Stopped = gray
+- Error = red
+- Improved agent plan readability by formatting task/tool pairs into a clearer multi-line display in the Agent Control panel
+- Added focused tests for font preference, command history navigation, geometry save/restore, and status/plan display formatting
+- Audited the desktop runtime path for the current usability pass and confirmed the supported launcher remains `start_rogue.bat` -> `rogue_app.py` with `brain.py` as secondary CLI support
+- Identified the current duplicate-command-entry defect in `rogue_app.py`: the desktop already exposes a top command bar while `build_input_area()` still creates a second bottom input/send row
+- Confirmed the requested usability changes can stay UI-local to `rogue_app.py` plus focused tests without altering router, planner, task, tool, or autonomous-loop backend behavior
+- Updated `PLANS.md` with a dedicated desktop usability refinement phase covering command-bar consolidation, geometry persistence, font normalization, context menus, history navigation, status colors, and plan readability
+- Added `brain/agent_state.py` with a thread-safe shared `AgentState` object so the autonomous loop and Tkinter UI can exchange loop state without direct widget coupling
+- Integrated `brain/auto_loop.py` with the shared agent state and added mode-aware cycle handling for:
+- `manual`: observe and plan only
+- `assist`: observe, plan, and hold approved tasks without execution
+- `auto`: observe, plan, and execute approved tasks
+- Added non-blocking autonomous loop controls to `rogue_app.py` with a dedicated card-style Agent Control panel that displays:
+- running status
+- current mode
+- interval seconds
+- last cycle time
+- next cycle time
+- latest observation summary
+- latest generated plan
+- approved tasks
+- blocked tasks
+- last result
+- last error
+- Added `Start Agent`, `Stop Agent`, and `Run One Cycle` desktop controls and a `Manual / Assist / Auto` mode selector
+- Kept the Tkinter main thread non-blocking by:
+- running autonomous work in background threads
+- refreshing UI state through `tkinter.after()`
+- avoiding direct widget updates from worker threads
+- Added focused tests for shared agent state formatting, manual-mode autonomous cycles, and Agent Control panel snapshot refresh behavior
+- Audited the current desktop layout and confirmed the correct integration path for agent controls remains `start_rogue.bat` -> `rogue_app.py` with `brain/auto_loop.py` as the autonomy backend
+- Identified the minimal implementation surface for the Agent Control panel as:
+- a new shared `brain/agent_state.py`
+- state-aware updates in `brain/auto_loop.py`
+- a dedicated non-blocking control card in `rogue_app.py`
+- Confirmed the existing desktop already has the needed card styling, background-thread patterns, and `after()` scheduling hooks to add the panel without rewriting the UI
+- Added `brain/sensor.py` with a deterministic `RogueSensor` that inspects the Downloads folder, counts files, totals file size, and reports recently modified files
+- Added `brain/policy.py` with a minimal `RoguePolicy` that auto-approves read-only tasks and blocks destructive intents such as `delete_files`, `move_files`, and `kill_process` unless explicitly approved
+- Added `brain/auto_loop.py` with a `RogueAutoLoop` that collects sensor state, derives a goal for the existing `RogueAgent`, filters planned steps through policy, executes only approved steps, and logs cycle payloads to `memory/session/`
+- Kept the safe autonomous loop integrated with the existing registry-backed agent path instead of introducing a second execution architecture
+- Added focused tests for Downloads sensing, policy filtering, autonomous cycle execution, and background loop start/stop behavior
+- Audited the repository structure for the safe autonomous loop extension and confirmed the supported runtime path remains `start_rogue.bat` -> `rogue_app.py` with `brain.py` as secondary CLI support
+- Identified the minimal autonomy integration surface as `brain.agent.RogueAgent`, `tool_registry.build_default_registry()`, and `memory_manager.MemoryManager`
+- Updated `PLANS.md` with a focused safe autonomous loop phase covering sensor collection, policy filtering, approved-task execution, and memory logging
+- Extended `memory/memory_store.py` with recent action and recent command history using a dedicated JSON persistence file
+- Kept the existing saved-notes store intact so current note workflows and callers remain compatible
+- Added `log()`, `log_command()`, `get_recent_actions()`, and `get_recent_commands()` helpers for simple recent-memory access
+- Added focused tests for recent action logging, recent command logging, and cross-process-style JSON persistence
+- Added `brain/task_queue.py` with a minimal sequential execution queue for `RogueAgent`
+- Added queue features for enqueueing steps, sequential execution, per-task status tracking, and cancellation of queued work
+- Integrated `RogueAgent.execute()` with the new brain task queue so agent steps run through the queue instead of direct registry invocation
+- Added focused tests for brain queue behavior, queue failure handling, cancellation, and `RogueAgent` queue integration
+- Added `brain/agent.py` with a minimal `RogueAgent` adapter for simple goal planning and sequential registry-backed execution
+- Kept the existing router -> planner -> agent loop runtime path unchanged so the new agent module is additive and non-invasive
+- Reused the current registry-backed tool execution model instead of introducing a parallel tool system
+- Added focused tests for `RogueAgent` planning, sequential execution, and compatibility with existing planner task objects
+- Audited the repository structure and identified the supported runtime path
+- Confirmed the current architecture already contains a router, memory helpers, tool modules, startup validation, and tests
+- Identified missing agentic orchestration modules required by the target design
+- Created the implementation plan and project guidance documents
+- Implemented planner.py
+- Implemented agent_loop.py
+- Implemented tool_registry.py
+- Implemented memory_manager.py
+- Implemented execution_logger.py
+- Implemented status_reporter.py
+- Integrated the new modules with brain.py, brain/router.py, and rogue_app.py
+- Added tests for planner, agent loop, tool registry, memory manager, execution logging, status reporting, and router agent dispatch
+- Ran full validation and documented results
+- Expanded planner coverage for safe status, folder-opening, folder-listing, downloads preview, and home-workspace preview workflows
+- Added strict per-task verification rules and task-level retry behavior to the agent loop
+- Added read-only workspace summary reporting with safe folder alias, memory, project, and folder-size coverage
+- Added safe project inspection with structure, language, file-count, README, and config detection
+- Added deterministic folder summaries with counts, top file types, largest files, and newest files
+- Kept the new capabilities read-only with no move, delete, or destructive agent workflows added
+- Added task_manager.py with persistent task records, step tracking, retry counts, verification results, final summaries, and resume support
+- Refactored agent memory into schema-separated session, task, project, and preference stores under `memory/`
+- Integrated task state into the planner -> agent_loop -> execution path for safe agent workflows
+- Persisted successful project inspection facts into project memory without using logs as the primary state store
+- Hardened task ID allocation with a file lock so concurrent agent runs do not reuse the same task ID
+- Added deterministic task visibility helpers to `task_manager.py` for all, active, resumable, recent, and detailed task inspection views
+- Added CLI task inspection commands in `brain.py` for listing tasks, filtering active/resumable tasks, showing task details, and viewing recent tasks
+- Extended `brain/router.py` so desktop chat `agent ...` commands support the same task visibility paths as the CLI
+- Added a minimal Agent Tasks sidebar in `rogue_app.py` with recent, active, resumable, detail, and status summary views
+- Added desktop diagnostics coverage for agent task counts and visibility status
+- Added tests for task visibility, CLI task routing, router agent task inspection, and desktop agent task helper behavior
+- Expanded safe alias coverage across router/planner tooling for desktop, downloads, documents, pictures, music, videos, workspace, projects, and `this folder`
+- Added deterministic natural-language folder inspection handling for phrases such as `scan desktop`, `inspect desktop`, `summarize downloads`, and `check my desktop`
+- Added deterministic preview-only folder organization handling for phrases such as `organize desktop`, `organize my downloads`, `organize documents`, `clean up my desktop`, and `sort my downloads`
+- Added a generic `preview_folder_organization` tool that produces structured category/count previews and explicitly states that no files were modified
+- Extended planner and router coverage so natural folder commands route into safe summaries or preview-only organization plans instead of vague fallback behavior
+- Added strict verification for preview-only folder organization payloads and outputs
+- Updated help text to reflect preview-only folder organization semantics
+- Extended preview-only folder organization with bounded recursive inspection support for cleanup-style requests
+- Improved preview categorization quality across images, documents, audio, video, archives, code, installers, shortcuts, folders, and other
+- Added richer preview reporting with total files analyzed, top categories, sample filenames, scope markers, nested-file counts, and explicit non-destructive wording
+- Kept plain `organize ...` previews top-level by default and enabled recursive analysis through deterministic cleanup/arrange/sort phrase handling
+- Refreshed `rogue_app.py` into a minimal chat-first control surface with a compact `Rogue` header, a left quick-command rail, a central chat transcript, and a bottom structured preview panel
+- Added lightweight structured preview rendering for organization previews, folder summaries, workspace summaries, system-status summaries, and simple task views without changing the underlying router/planner/agent pipeline
+- Replaced the always-visible task sidebar with a small `Active tasks` indicator that opens a simple on-demand task list window
+- Added a compact runtime status line that reports CPU, RAM, and active agent task count
+- Added UI-focused tests for preview-model generation and router payload handoff to support the new minimal desktop surface
+- Standardized the desktop typography around an Inter-first font stack with `Inter, Segoe UI, Roboto, Arial, sans-serif` fallback behavior
+- Increased desktop UI readability with larger chat, header, quick-command, and preview text sizing while keeping the interface minimal
+- Refined the desktop typography to pixel-based sizing so chat, headers, buttons, and preview text render more consistently on Windows
+- Added typography fallback tests so Windows-safe font selection is verified instead of assumed
+- Refreshed the structured result preview layout into light card-style containers with clearer section titles, increased spacing, and separated content blocks for agent output
+- Expanded structured folder and preview rendering so sections such as `Top File Types`, `Largest Files`, `Newest Files`, and preview detail blocks render as distinct readable cards
+- Added a dedicated desktop command registry module so control-panel commands, aliases, examples, categories, handlers, and confirmation flags are defined centrally
+- Added a top command bar to `rogue_app.py` with a text input and `Execute` button near the dashboard header
+- Added visible `Help` and `Run Task` controls in the top header and a context-sensitive `Back` button for secondary views
+- Added safe secondary-view navigation state with `show_help()`, `show_home()`, `go_back()`, and `execute_command()` helpers
+- Bound the `Escape` key to the same safe back-navigation path used by the `Back` button
+- Added a grouped Help view covering Navigation, System, Analysis, and Actions commands with aliases, descriptions, examples, and confirmation notes
+- Added desktop command handlers for help, navigation, status, agent status, tasks, task history, memory, folder analysis, duplicate scans, folder opening, cleanup previews, and report generation
+- Added modal confirmation gating for risky desktop command-bar actions such as organization and cleanup flows
+- Added focused desktop tests for command registry metadata, help view grouping, safe back navigation, unknown-command handling, and confirmation gating
+- Added a persistent `Home` button to the desktop header and kept `Back` visible for secondary preview-driven screens
+- Improved preview/view navigation so secondary task-detail and help views participate in the same back/home pattern
+- Added command-bar clipboard bindings for `Ctrl+C`, `Ctrl+V`, `Ctrl+X`, `Ctrl+A`, plus a right-click command-bar context menu with copy/paste/cut/select-all
+- Converted preview/help/report section bodies to selectable read-only text blocks with a result-text context menu for copy, copy-line, and select-all
+- Added a scrollable preview/result surface with a vertical scrollbar and mouse-wheel support across dashboard and secondary preview cards
+- Added richer result interactivity for file-based analysis rows with `Open`, `Open Folder`, `Copy Path`, and `Copy Line` actions
+- Added lightweight hover states to core header, command, preview-action, and quick-command buttons
+- Added clearer status feedback states such as `Ready`, `Running`, `Done`, and `Error`, plus lightweight action feedback for copy/open/execute flows
+- Aligned the desktop header, command composer, response panels, and action buttons to a shared chat-style design language using a central UI theme token set
+- Restyled the command bar to feel like an assistant composer with clearer hierarchy, stronger spacing, and `Send` semantics instead of an admin-style utility field
+- Restyled the central conversation panel and transcript tags for improved readability while keeping the stable full-width transcript rendering
+- Restyled the result preview area so it reads as `Rogue response` output instead of a generic report panel while keeping the existing preview architecture intact
+- Tightened sidebar/quick-prompt wording and visual hierarchy so the desktop feels like a usable assistant surface rather than a static dashboard
+
+## Remaining Work
+
+- `rogue_app.py` still contains some older unused Home/dashboard builder helpers and legacy sidebar/task-panel methods that no longer drive the visible shell; they are safe but should be consolidated in a later cleanup-only pass
+- Window-state persistence currently stores/restores geometry only; maximized/minimized window state is intentionally left unchanged for simplicity and stability
+- The safe autonomous loop exists as a callable module but is not yet exposed through a dedicated desktop or CLI control surface
+- The safe autonomous loop is now exposed through the desktop UI but is still not exposed through a dedicated CLI control surface
+- The Agent Control panel currently displays the configured interval but does not yet expose interval editing
+- The new vertical scrollbar applies to the preview/result surface; the quick-command rail remains fixed and the chat transcript keeps its own existing scroller
+- `open folder` is registered but still requires a target path or alias and currently returns a usage-oriented stub message from the desktop command bar
+- `cleanup temp` is intentionally stubbed in the desktop command bar pending a safe local temp-cleanup policy
+- `move files` is intentionally stubbed in the desktop command bar pending a parameterized source/destination workflow
+- Extend strict verification to future write-capable workflows only after explicit confirmation gating
+- Add more planner intents only where they remain clearly non-destructive and deterministic
+- `tools/files_tool.py` still contains the pre-hardening helper implementations above the new evidence-backed overrides because the file needs a cleanup-only encoding-safe pass; runtime behavior uses the later verified definitions, and tests cover the active path
+- Legacy mixed-memory files such as `memory/agent_memory.json` still exist on disk for compatibility but are no longer the primary store
+- The minimal task popup is intentionally read-only and does not yet expose inline resume controls
+- Recursive previews are intentionally bounded and may truncate very large folder trees for determinism
+
+## Blockers
+
+- None
+
+## Validation Results
+
+- `py_compile` passed for `rogue_app.py`, `tests/test_startup_and_config.py`, and `tests/test_desktop_command_registry.py` after the multi-view desktop-shell refactor
+- `python -m unittest tests.test_desktop_command_registry tests.test_startup_and_config` passed with 43 tests after the multi-view desktop-shell refactor
+- `python -m unittest discover -s tests` passed with 179 tests after the multi-view desktop-shell refactor
+- Real Tk startup smoke check passed for `RogueApp`; the desktop root initialized and reported the expected `Rogue` window title after the multi-view refactor
+- Supported-entrypoint smoke validation passed:
+- `start_rogue.bat` exists
+- `rogue_app.py` imports successfully
+- default geometry remains `1360x860`
+- python -m py_compile passed for `rogue_app.py`, `tests/test_startup_and_config.py`, and `tests/test_desktop_command_registry.py` after the Home dashboard stabilization pass
+- python -m unittest tests.test_startup_and_config tests.test_desktop_command_registry passed with 41 tests after the Home dashboard stabilization pass
+- python -m unittest discover -s tests -p "test_*.py" passed with 177 tests after the Home dashboard stabilization pass
+- Non-interactive Tk startup smoke check passed for `RogueApp` construction after the Home dashboard stabilization pass
+- python -m py_compile passed for `rogue_app.py`, `tests/test_startup_and_config.py`, and `tests/test_desktop_command_registry.py` after the desktop usability refinement
+- python -m unittest tests.test_startup_and_config tests.test_desktop_command_registry passed with 37 tests after the desktop usability refinement
+- python -m unittest discover -s tests -p "test_*.py" passed with 173 tests after the desktop usability refinement
+- Non-interactive Tk startup smoke check passed for `RogueApp` after the desktop usability refinement; initialized geometry resolved to `1400x900`
+- python -m py_compile passed for `brain/agent_state.py`, `brain/auto_loop.py`, `rogue_app.py`, `tests/test_brain_agent_state.py`, `tests/test_brain_auto_loop.py`, and `tests/test_startup_and_config.py`
+- python -m unittest tests.test_brain_agent_state tests.test_brain_auto_loop tests.test_startup_and_config passed with 32 tests
+- python -m unittest discover -s tests -p "test_*.py" passed with 170 tests
+- Non-interactive startup smoke check passed for `RogueApp` construction with the new shared agent state initialized in `manual` mode
+- python -m py_compile passed for `brain/sensor.py`, `brain/policy.py`, and `brain/auto_loop.py`
+- python -m unittest tests.test_brain_sensor tests.test_brain_policy tests.test_brain_auto_loop passed
+- python -m unittest discover -s tests -p "test_*.py" passed with 167 tests
+- `RogueAutoLoop.run_cycle()` executed successfully end to end with goal `organize downloads`, 2 approved tasks executed, and 1 blocked task recorded
+- Planning checkpoint complete
+- Agent workflow 'report system status' success=True
+- python -m py_compile passed for the updated runtime modules
+- python -m unittest discover -s tests -p "test_*.py" passed
+- python -m unittest discover -s tests -p "test_*.py" passed with 103 tests
+- python -m unittest discover -s tests -p "test_*.py" passed with 115 tests
+- python -m unittest discover -s tests -p "test_*.py" passed with 127 tests
+- python -m unittest discover -s tests -p "test_*.py" passed with 138 tests
+- python -m unittest discover -s tests -p "test_*.py" passed with 142 tests
+- python brain.py agent report system status executed successfully
+- RogueApp initialized successfully in a non-interactive Tk startup check
+- python brain.py agent list files in downloads executed successfully
+- python brain.py agent home workspace status executed successfully
+- python brain.py agent open downloads folder executed successfully
+- python brain.py agent workspace summary executed successfully
+- python brain.py agent inspect project RogueAI executed successfully
+- python brain.py agent summarize folder downloads executed successfully
+- Agent workflow 'system status' success=True
+- Agent workflow 'list files in downloads' success=True
+- Agent workflow 'home workspace status' success=True
+- Agent workflow 'open downloads folder' success=True
+- Agent workflow 'inspect project RogueAI' success=True
+- Agent workflow 'workspace summary' success=True
+- python brain.py agent resume task 4 returned the expected completed-task guard message
+- python -m py_compile passed for task_manager.py, brain.py, brain/router.py, rogue_app.py, and the updated tests
+- python brain.py agent list tasks executed successfully
+- python brain.py agent list active tasks executed successfully
+- python brain.py agent show task 1 executed successfully
+- python brain.py agent recent tasks executed successfully
+- Agent workflow 'scan desktop' success=True
+- Agent workflow 'inspect desktop' success=True
+- Agent workflow 'summarize downloads' success=True
+- Agent workflow 'organize desktop' success=True
+- Agent workflow 'organize my downloads' success=True
+- Agent workflow 'organize documents' success=True
+- python brain.py agent scan desktop executed successfully
+- python brain.py agent inspect desktop executed successfully
+- python brain.py agent summarize downloads executed successfully
+- python brain.py agent organize desktop executed successfully
+- python brain.py agent organize my downloads executed successfully
+- python brain.py agent organize documents executed successfully
+- python brain.py agent organize desktop executed successfully with top-level preview scope
+- python brain.py agent clean up my desktop executed successfully with recursive preview scope
+- python -m py_compile passed for brain/agent.py
+- python -m unittest tests.test_brain_agent tests.test_planner tests.test_tool_registry passed
+- python -m unittest discover -s tests -p "test_*.py" passed with 156 tests
+- python brain.py agent report system status executed successfully after adding brain/agent.py
+- python -m py_compile passed for brain/task_queue.py and the updated brain/agent.py
+- python -m unittest tests.test_brain_task_queue tests.test_brain_agent passed
+- python -m unittest discover -s tests -p "test_*.py" passed with 160 tests
+- python brain.py agent report system status executed successfully after adding brain/task_queue.py
+- python -m py_compile passed for memory/memory_store.py
+- python -m unittest tests.test_memory_store passed
+- python -m unittest discover -s tests -p "test_*.py" passed with 162 tests
+- python brain.py agent report system status executed successfully after extending memory/memory_store.py
+- Agent workflow 'clean up my desktop' success=True
+- python -m py_compile passed for rogue_app.py, brain/router.py, tests/test_startup_and_config.py, and tests/test_router.py after the UI refresh
+- python -m unittest tests.test_startup_and_config tests.test_router passed with 65 tests after the UI refresh
+- python -m unittest discover -s tests -p "test_*.py" passed with 146 tests after the UI refresh
+- RogueApp initialized successfully in a Tk startup smoke test after the UI refresh
+- Agent workflow 'inspect downloads' success=True
+- python -m py_compile passed for rogue_app.py and tests/test_startup_and_config.py after the typography refresh
+- python -m unittest tests.test_startup_and_config passed with 27 tests after the typography refresh
+- python -m unittest discover -s tests -p "test_*.py" passed with 147 tests after the typography refresh
+- RogueApp initialized successfully in a Tk startup smoke test after the typography refresh
+- RogueApp typography selected the expected Windows fallback font (`Segoe UI`) when `Inter` was not installed
+- python -m py_compile passed for rogue_app.py and tests/test_startup_and_config.py after the result-card refresh
+- python -m unittest tests.test_startup_and_config passed with 27 tests after the result-card refresh
+- python -m unittest discover -s tests -p "test_*.py" passed with 147 tests after the result-card refresh
+- RogueApp initialized successfully in a Tk startup smoke test after the result-card refresh
+- python -m py_compile passed for rogue_app.py, ui_command_registry.py, and tests/test_desktop_command_registry.py after the control-panel update
+- python -m unittest tests.test_desktop_command_registry tests.test_startup_and_config passed with 33 tests after the control-panel update
+- python -m unittest discover -s tests -p "test_*.py" passed with 153 tests after the control-panel update
+- RogueApp initialized successfully in a Tk startup smoke test after the control-panel update
+- python -m py_compile passed for rogue_app.py, ui_command_registry.py, tests/test_desktop_command_registry.py, and tests/test_startup_and_config.py after the interactivity update
+- python -m unittest tests.test_desktop_command_registry tests.test_startup_and_config passed with 33 tests after the interactivity update
+- python -m unittest discover -s tests -p "test_*.py" passed with 153 tests after the interactivity update
+- RogueApp initialized successfully in a Tk startup smoke test after the interactivity update
+- python -m py_compile passed for rogue_app.py, ui_command_registry.py, tests/test_desktop_command_registry.py, and tests/test_startup_and_config.py after the chat-style design alignment
+- python -m unittest tests.test_desktop_command_registry tests.test_startup_and_config passed with 33 tests after the chat-style design alignment
+- python -m unittest discover -s tests -p "test_*.py" passed with 153 tests after the chat-style design alignment
+- RogueApp initialized successfully in a Tk startup smoke test after the chat-style design alignment
+- Agent workflow 'organize folders' success=False
+- Agent workflow 'check system health' success=False
+- Agent workflow 'organize it' success=False
+- Agent workflow 'scan my computer' success=False
+- Agent workflow 'confirm organize desktop' success=True

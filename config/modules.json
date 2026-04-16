@@ -1,0 +1,7 @@
+{
+  "memory": true,
+  "projects": true,
+  "agents": true,
+  "tools": true,
+  "autonomy": true
+}

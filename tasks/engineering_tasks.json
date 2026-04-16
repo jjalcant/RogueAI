@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "title": "Feature task: add browser control",
+    "type": "feature",
+    "prompt_text": "You are extending RogueAI, a stable local desktop AI agent.\n\nTask type: feature\nTarget area: add browser control\nGoal: add browser control\n\nConstraints:\n- minimal invasive changes\n- no architecture rewrite\n- preserve current behavior\n\nRequirements:\n- keep it review-first and human-approved\n- do not introduce autonomous self-modification\n- return a concise implementation summary, verification results, and remaining risks",
+    "status": "archived",
+    "created_at": "2026-04-06T20:28:02"
+  }
+]
