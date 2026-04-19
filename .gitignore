@@ -1,4 +1,10 @@
-.venv/
+memory/
+*.jsonl
+.webui_secret_key
+.env
+.env.*
+*.key
+*.pem
+secrets/
 __pycache__/
-*.pyc
-logs/
+.venv/
